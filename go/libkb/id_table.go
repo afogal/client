@@ -1340,6 +1340,8 @@ func (idt *IdentityTable) proofRemoteCheck(hasPreviousTrack, forceRemoteCheck bo
 		return
 	}
 
+	// TODO is it a problem that bad hints now go to the cache?
+
 	res.err = pc.CheckStatus(idt.G(), *res.hint)
 
 	// If no error than all good
